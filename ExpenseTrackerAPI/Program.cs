@@ -3,11 +3,9 @@ using ExpenseTrackerAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-
+builder.Services.AddEndpointsApiExplorer();  // Required for Swagger
+builder.Services.AddSwaggerGen();             // Adds Swagger generator
 builder.Services.AddSingleton<ExpenseService>();
 
 var app = builder.Build();
@@ -15,13 +13,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();      // Enables Swagger
+    app.UseSwaggerUI();    // Enables Swagger UI at /swagger
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
