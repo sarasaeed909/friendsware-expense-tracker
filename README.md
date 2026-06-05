@@ -153,7 +153,7 @@ ExpenseTrackerAPI/
 
 ## Screenshots
 
-All screenshots of the running application and API results are available in the **[screenshots/](screenshots/)** folder, covering the following features:
+All screenshots of the running application and API results are available in the Screenshots folder inside project, covering the following features:
 
 - Swagger UI
 - GET All Expenses
@@ -166,7 +166,7 @@ All screenshots of the running application and API results are available in the 
 
 ## Known Issues
 
-- None. All core and bonus features are implemented. Note that in-memory storage is used — data will be lost on application stop.
+- None. All core and bonus features are implemented. Note that in-memory storage is used data will be lost on application stop.
 
 ## About
 
