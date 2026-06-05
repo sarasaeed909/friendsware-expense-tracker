@@ -151,16 +151,18 @@ ExpenseTrackerAPI/
 
 ## Screenshots
 
-| Feature | Screenshot |
-|---------|------------|
-| Swagger UI | ![Swagger UI](screenshots/Swagger%20UI.png) |
-| GET All Expenses | ![GET All Expenses](screenshots/GET%20all%20expenses.png) |
-| POST Create Expense | ![POST Expense](screenshots/Post_Expense.png) |
-| Pagination (B1) | ![Pagination](screenshots/pagination_B1.png) |
-| Category Filter (B2) | ![Category Filter](screenshots/Category%20Filter_B2.png) |
-| PUT Update (B3) | ![PUT Update](screenshots/update_B3.png) |
-| Summary Endpoint | ![Summary](screenshots/summary_endpoint.png) |
-| Postman Collection | ![Postman](screenshots/postman.png) |
+## Screenshots
+
+All screenshots of the running application and API results are available in the **[screenshots/](screenshots/)** folder, covering the following features:
+
+- Swagger UI
+- GET All Expenses
+- POST Create Expense
+- Pagination (B1)
+- Category Filter (B2)
+- PUT Update (B3)
+- Summary Endpoint
+- Postman Collection
 
 ## Known Issues
 
