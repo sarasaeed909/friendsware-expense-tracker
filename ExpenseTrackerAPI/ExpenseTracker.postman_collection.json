@@ -1,0 +1,503 @@
+{
+  "info": {
+    "_postman_id": "63ce1785-3ed5-430a-a4e3-485b88ca0419",
+    "name": "Expense Tracker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55477601",
+    "_collection_link": "https://go.postman.co/collection/55477601-63ce1785-3ed5-430a-a4e3-485b88ca0419?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - GET All Expenses (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 - POST Create Expense (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Grocery Shopping\",\r\n  \"amount\": 55.00,\r\n  \"category\": \"Shopping\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - DELETE Expense - Existing ID (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/9",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - GET Expense Summary (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/summary",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 - GET All Expenses After Changes (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 - POST Another Valid Expense (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Team Lunch\",\r\n  \"amount\": 45.50,\r\n  \"category\": \"Food\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 - POST Create Expense - Empty Title (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"\",\r\n  \"amount\": 25.00,\r\n  \"category\": \"Food\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08 - POST Create Expense - Zero Amount (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Free Coffee\",\r\n  \"amount\": 0,\r\n  \"category\": \"Food\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09 - POST Create Expense - Negative Amount (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Refund\",\r\n  \"amount\": -10.00,\r\n  \"category\": \"Shopping\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 - GET Summary Again (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/summary",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 - DELETE - Non-existent ID (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/999",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12 - PUT Update Expense (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Updated Lunch\",\r\n  \"amount\": 20.00,\r\n  \"category\": \"Food\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13 - PUT Update Expense - Invalid ID (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Test\",\r\n  \"amount\": 10,\r\n  \"category\": \"Test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:44356/api/expenses/999",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "14 - GET with Pagination (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses?page=1&pageSize=3",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "15 - GET Pagination - Invalid Page (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses?page=0&pageSize=5",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "pageSize",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "16 -  GET with Category Filter (Success)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses?category=Food",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Food"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "17 - GET Category Filter - No Results (Failure)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:44356/api/expenses?category=Sports",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "44356",
+          "path": [
+            "api",
+            "expenses"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Sports"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
